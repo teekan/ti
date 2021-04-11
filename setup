@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 apt -y update
 apt install -y mysql-server
 apt install -y apache2
