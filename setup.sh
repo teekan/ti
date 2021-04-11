@@ -20,3 +20,4 @@ chmod -R 777 /var/www/html/media/
 chmod -R 777 /var/www/html/templates/
 chmod -R 777 /var/www/html/tmp/
 chmod 777 /var/www/html/aembed.sh
+service apache2 restart
