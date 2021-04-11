@@ -1,23 +1,23 @@
 #!/bin/sh
-apt -y update
-apt install -y mysql-server
-apt install -y apache2
-apt install -y php libapache2-mod-php php-mysql
-apt install -y tar
-apt install -y ffmpeg
-tar -xf archive.tar
-mv ./site/* /var/www/html/
-rm /var/www/html/index.html
-echo "create database fuckyou" | mysql -u root -p
-mysql -u root -p fuckyou < ./site/avs.sql
-rm /var/www/html/avs.sql
-echo "extension=php_mysqli.dll" >> /etc/php/7.0/apache2/php.ini
-chmod 777 /var/www/html/include/config.local.php
-chmod -R 777 /var/www/html/cache/frontend
-chmod -R 777 /var/www/html/cache/backend
-chmod -R 777 /var/wwww/html//images/
-chmod -R 777 /var/www/html/media/
-chmod -R 777 /var/www/html/templates/
-chmod -R 777 /var/www/html/tmp/
-chmod 777 /var/www/html/aembed.sh
-service apache2 restart
+sudo apt -y update
+sudo apt install -y mysql-server
+sudo apt install -y apache2
+sudo apt install -y php libapache2-mod-php php-mysql
+sudo apt install -y tar
+sudo apt install -y ffmpeg
+sudo tar -xf archive.tar
+sudo mv ./site/* /var/www/html/
+sudo rm /var/www/html/index.html
+sudo echo "create database fuckyou" | mysql -u root -p
+sudo mysql -u root -p fuckyou < ./site/avs.sql
+sudo rm /var/www/html/avs.sql
+sudo echo "extension=php_mysqli.dll" >> /etc/php/7.0/apache2/php.ini
+sudo chmod 777 /var/www/html/include/config.local.php
+sudo chmod -R 777 /var/www/html/cache/frontend
+sudo chmod -R 777 /var/www/html/cache/backend
+sudo chmod -R 777 /var/wwww/html//images/
+sudo chmod -R 777 /var/www/html/media/
+sudo chmod -R 777 /var/www/html/templates/
+sudo chmod -R 777 /var/www/html/tmp/
+sudo chmod 777 /var/www/html/aembed.sh
+sudo service apache2 restart
