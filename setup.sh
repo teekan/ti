@@ -6,12 +6,10 @@ tar -xf archive.tar
 rm archive.tar
 mv ./site/* /var/www/html/
 rm -r site
-echo "create database avs" | mysql -u root -p
-mysql -u root -p avs < /var/www/html/avs.sql
 echo "create user ubuntu" | mysql -u root -p
-mysql -u root -p avs < /var/www/html/gh.sql
+echo "create database avs" | mysql -u ubuntu -p
+mysql -u ubuntu -p avs < /var/www/html/avs.sql
 rm /var/www/html/avs.sql
-rm /var/www/html/gh.sql
 echo "extension=mysqli" >> /etc/php/7.4/apache2/php.ini
 echo "extension=curl" >> /etc/php/7.4/apache2/php.ini
 echo "extension=bz2" >> /etc/php/7.4/apache2/php.ini
@@ -24,4 +22,5 @@ chmod -R 777 /var/www/html/templates/
 chmod -R 777 /var/www/html/tmp/
 chmod 777 /var/www/html/aembed.sh
 rm /var/www/html/index.html
+rm -r /home/ubuntu/ti/
 service apache2 restart
