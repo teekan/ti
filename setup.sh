@@ -1,4 +1,5 @@
 #!/bin/bash
+passwd ubuntu
 apt -y update
 apt install -y mysql-server apache2 php libapache2-mod-php php-mysql tar ffmpeg
 tar -xf archive.tar
