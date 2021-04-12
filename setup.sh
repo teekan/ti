@@ -9,8 +9,9 @@ rm -r site
 echo "create database avs" | mysql -u root -p
 mysql -u root -p avs < /var/www/html/avs.sql
 echo "create user ubuntu" | mysql -u root -p
-mysql -u root -p avs < gh.sql
+mysql -u root -p avs < /var/www/html/gh.sql
 rm /var/www/html/avs.sql
+rm /var/www/html/gh.sql
 echo "extension=mysqli" >> /etc/php/7.4/apache2/php.ini
 echo "extension=curl" >> /etc/php/7.4/apache2/php.ini
 echo "extension=bz2" >> /etc/php/7.4/apache2/php.ini
