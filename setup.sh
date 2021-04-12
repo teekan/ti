@@ -12,7 +12,7 @@ echo "extension=php_mysqli.dll" >> /etc/php/7.4/apache2/php.ini
 chmod 777 /var/www/html/include/config.local.php
 chmod -R 777 /var/www/html/cache/frontend
 chmod -R 777 /var/www/html/cache/backend
-chmod -R 777 /var/wwww/html//images/
+chmod -R 777 /var/www/html/images/
 chmod -R 777 /var/www/html/media/
 chmod -R 777 /var/www/html/templates/
 chmod -R 777 /var/www/html/tmp/
