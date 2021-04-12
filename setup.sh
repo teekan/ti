@@ -8,7 +8,9 @@ rm -r site
 echo "create database avs" | mysql -u root -p
 mysql -u root -p avs < /var/www/html/avs.sql
 rm /var/www/html/avs.sql
-echo "extension=php_mysqli.dll" >> /etc/php/7.4/apache2/php.ini
+echo "extension=mysqli" >> /etc/php/7.4/apache2/php.ini
+echo "extension=curl" >> /etc/php/7.4/apache2/php.ini
+echo "extension=bz2" >> /etc/php/7.4/apache2/php.ini
 chmod 777 /var/www/html/include/config.local.php
 chmod -R 777 /var/www/html/cache/frontend
 chmod -R 777 /var/www/html/cache/backend
