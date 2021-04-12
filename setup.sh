@@ -53,9 +53,8 @@ echo "##########################################################################
 echo "####################################################################################################################################################"
 echo "#################################  Enter the password  ##################   password123  ###########################################################"
 
-mysql -u root -p < /var/www/html/gh.sql
-echo "create database avs" | mysql -u ubuntu -p
-mysql -u root -p < /var/www/html/jg.sql
+
+echo "create database avs;use avs;grant all privileges on avs to ubuntu@localhost | mysql -u root -p"
 mysql -u ubuntu -p avs < /var/www/html/avs.sql
 rm /var/www/html/gh.sql
 rm /var/www/html/avs.sql
